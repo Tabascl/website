@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    font-size: 18px;
+    margin: 0px;
+    height: 100%;
+    overflow-anchor: none;
+}
+
+strong {
+    color: chocolate;
+}
