@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { slideAnimation } from './animations';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,8 @@ import { slideAnimation } from './animations';
 })
 export class AppComponent {
   title = 'Simon Wilde';
+
+  prepareOutlet(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
 }

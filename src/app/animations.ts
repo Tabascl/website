@@ -6,24 +6,29 @@ import {
     query,
     group
 } from '@angular/animations';
-import { isAbsolute } from 'path';
 
 export const slideAnimation = trigger('slideAnimation', [
     transition('* <=> *', [
+        style({ position: 'relative' }),
         query(
             ':enter, :leave',
-            [style({ position: 'absolute', width: '100%' })],
+            [style({ position: 'absolute', top: 0, left: 0, width: '100%' })],
+            { optional: true }
+        ),
+        query(
+            ':enter',
+            [style({ left: '110%' })],
             { optional: true }
         ),
         group([
             query(
                 ':leave',
-                [style({ transform: 'translateX(0%)' }), animate('0.5s ease-in-out', style({ transform: 'translateX(-100%)' }))],
+                [animate('300ms ease-out', style({ left: '-110%' }))],
                 { optional: true }
             ),
             query(
                 ':enter',
-                [style({ transform: 'translateX(100%)' }), animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))],
+                [animate('300ms ease-out', style({ left: '0%' }))],
                 { optional: true }
             )
         ])

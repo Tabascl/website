@@ -6,8 +6,8 @@
   <app-navbar></app-navbar>
   <app-card></app-card>
   <div class="wrapper">
-    <div [@slideAnimation]="o.isActivated ? o.activatedRoute : ''">
-      <router-outlet #o="outlet"></router-outlet>
+    <div [@slideAnimation]="prepareOutlet(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
     </div>
   </div>
 </section>

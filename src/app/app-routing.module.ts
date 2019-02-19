@@ -6,9 +6,10 @@ import { CvComponent } from './cv/cv.component';
 import { ProjectsComponent } from './projects/projects.component'
 
 const routes: Routes = [
-  { path: '', component: MainPageComponent },
-  { path: 'cv', component: CvComponent },
-  { path: 'projects', component: ProjectsComponent }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: MainPageComponent, data: { animation: 'Home' } },
+  { path: 'cv', component: CvComponent, data: { animation: 'CV' } },
+  { path: 'projects', component: ProjectsComponent, data: { animation: 'Projects' } }
 ];
 
 @NgModule({

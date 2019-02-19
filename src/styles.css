@@ -15,11 +15,9 @@ strong {
 }
 
 router-outlet ~ * {
-    width: 100%;
     z-index: 10;
 }
 
 .wrapper {
-    position: absolute;
     padding: 0 20px;
 }
