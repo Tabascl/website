@@ -9,9 +9,12 @@ section {
     background-image: linear-gradient(to right, #ffffff, #fbfbfb, #f6f6f6, #f2f2f2, #eeeeee);
 }
 
-.background {
+.container {
     position: fixed;
     top: 0px;
     left: 0px;
+    width: 50%;
     height: 100%;
+    background-image: url("../assets/img/dom.jpg");
+    background-size: cover;
 }
