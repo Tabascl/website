@@ -17,4 +17,5 @@ section {
     height: 100%;
     background-image: url("../assets/img/dom.jpg");
     background-size: cover;
+    z-index: -10;
 }

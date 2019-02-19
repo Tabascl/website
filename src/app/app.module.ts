@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { HighlightModule } from 'ngx-highlightjs';
@@ -30,6 +31,7 @@ export function hljsLanguages() {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HighlightModule.forRoot({
       languages: hljsLanguages

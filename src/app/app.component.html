@@ -3,7 +3,11 @@
 <!-- <img class="background" src="../../assets/img/dom.jpg" alt="A picture of the curch in Regensburg, with a boat in the foreground." /> -->
 <div class="container"></div>
 <section id="contentsection">
-    <app-navbar></app-navbar>
-    <app-card></app-card>
-  <router-outlet></router-outlet>
+  <app-navbar></app-navbar>
+  <app-card></app-card>
+  <div class="wrapper">
+    <div [@slideAnimation]="o.isActivated ? o.activatedRoute : ''">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+  </div>
 </section>
