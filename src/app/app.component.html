@@ -1,13 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-<!-- <img class="background" src="../../assets/img/dom.jpg" alt="A picture of the curch in Regensburg, with a boat in the foreground." /> -->
-<div class="container"></div>
-<section class="content">
-  <app-navbar></app-navbar>
-  <app-card></app-card>
-  <div class="wrapper">
-    <div [@slideAnimation]="prepareOutlet(outlet)">
-      <router-outlet #outlet="outlet"></router-outlet>
+<div class="root">
+  <div class="container"></div>
+  <div class="content">
+    <app-navbar></app-navbar>
+    <app-card></app-card>
+    <div class="wrapper">
+      <div [@slideAnimation]="prepareOutlet(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+      </div>
     </div>
   </div>
-</section>
+</div>

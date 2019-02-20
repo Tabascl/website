@@ -49,7 +49,7 @@ nav ul li a:after {
     background: lightgrey;
     height: 100%;
     width: 0%;
-    transition: all 0.5s;
+    transition: all 300ms ease-out;
 }
 
 nav ul li .active:after {
